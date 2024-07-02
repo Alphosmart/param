@@ -2,7 +2,6 @@
 
 var allTodos = [];
 
-// Get the display area
 function addTodo() {
   var inputs = document.getElementById('todo').value;
   if (inputs !== '') {
@@ -15,7 +14,6 @@ function addTodo() {
   }
 }
 
-// Display Todo
 function displayTodo() {
   showFace.innerHTML = '';
   for (var i = 0; i < allTodos.length; i++) {
@@ -27,7 +25,6 @@ function displayTodo() {
   }
 }
 
-// Delete Todo
 function deleteTodo(index) {
   var confirmDelete = confirm('Are you sure you want to delete this item?');
   if (confirmDelete) {
@@ -36,7 +33,6 @@ function deleteTodo(index) {
   }
 }
 
-// Edit Todo
 function editTodo(index) {
   var newTodo = prompt('Edit your todo:', allTodos[index]);
   if (newTodo !== null && newTodo !== '') {
